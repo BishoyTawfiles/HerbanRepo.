@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    background-color: white;
+    height: 5000px;
+    -webkit-user-select: none;
+
+}
+
+
+.main-header {
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    overflow: auto;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 1px 1px 5px 1px rgba(128, 128, 128,0.5);
+}
+
+.main-header a {
+    color: black;
+    text-decoration: none;
+}
+
+.left-header {
+    width: 15%;
+    height: 100%;
+    float: left;
+    font-size: 18px;
+    
+}
+
+.left-header i {
+    margin-left:  10%;
+    margin-top: 10%;
+
+}
+
+.left-header span {
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.center-header {
+    width: 70%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.center-header-img {
+    margin-top: 0.5%;
+
+}
+
+.center-header-li li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 1.5%;
+    margin-left: 3%;
+    font-size: 20px;
+
+}
+
+.center-header-li a::after {
+    position: fixed;
+    content: "";
+
+    width: 100%;
+    height: 0;
+    top: 15%;
+    left: 0;
+
+    background-color: rgb(250, 250, 250);
+    border: 2px solid rgb(235, 235, 235);
+    opacity: 0;
+
+}
+
+.center-header-li a:hover::after {
+    opacity: 1;
+    width: 100%;
+    height: 300px;
+    transition: 1s;
+}
+
+.center-header-li a:hover .sub-menu {
+    display: block;
+}
+
+.right-header {
+    width: 15%;
+    height: 100%;
+    float: right;
+    font-size: 20px;
+    padding-top: 1.5%;
+    padding-left: 5%;
+    
+}
+
+.right-header i {
+    margin-left: 5%;
+}
+
+
+/* //////////////////////////////////////////////////////////////*/
+
+.main-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 5%;
+
+}
+
+.main-setion-title h1 {
+    background-image: url(../Images//gaetano-cessati-7Rgz-3PVnLU-unsplash.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Righteous', cursive;
+    color: transparent;
+    position: absolute;
+    
+}
+
+.main-section-img {
+    position: absolute;
+    top: -8%;
+    left: 45%;
+    opacity: 0;
+    animation-name: img-change;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;  
+    
+
+}
+
+@keyframes img-change {
+    0%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.sectionB {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid black;
+    position: relative;
+}
+
+.sectionB-bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/Screenshot\ 2023-09-1\ 154847.jpg.png);
+    background-size: cover;
+    position: absolute;
+
+}
+
+
+.sectionB-info {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 500px 10px rgb(20, 20, 20) inset;
+    top: 25%;
+    right: 10%;
+    padding: 40px;
+    color: white;
+
+}
+
+.sectionB-info p {
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.sectionB button {
+    margin: 50px 20px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    font: normal bold 20px 'Poiret One', cursive;
+}
+
+.sectionC-title  , .sectionF-title {
+    margin: 50px auto;
+    text-align: center;
+    width: 15%;
+}
+
+.sectionC-line , .sectionF-line {
+    width: 80px;
+    height: 3px;
+    margin: 10px auto;
+    background-color: rgb(78, 78, 78);
+    border-radius: 20px;
+    
+} 
+
+.sectionC-title:hover .sectionC-line , .sectionF-title:hover .sectionF-line {
+    width: 120px;
+}
+
+.sectionC {
+    width: 100%;
+    height: 80vh;
+    /* border: 2px solid black; */
+
+}
+
+.sectionC-items {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    /* border: 2px solid black; */
+    border-radius: 2px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: normal;
+
+}
+
+.sectionC-item1 , .sectionC-item2 , .sectionC-item3 {
+    flex-basis: 30%;
+    height: 100%;
+    background-color: black;
+    color: white;
+
+} 
+
+.sectionC-item1 img , .sectionC-item2 img , .sectionC-item3 img {
+    width: 100%;
+    height: 70%;
+}
+
+.sectionC-item1 h3 , .sectionC-item2 h3 , .sectionC-item3 h3{
+    font-weight: bold;
+    font-size: 22px;
+    margin: 5px 0px 15px 15px;
+}
+
+.sectionC-item1 p , .sectionC-item2 p , .sectionC-item3 p  {
+    margin: 5px 0px 30px 15px;
+
+} 
+
+.sectionC-item1 input , .sectionC-item2 input , .sectionC-item3 input {
+    border: 0;
+    background-color: white;
+    border-radius: 50px;
+    padding: 15px 30px;
+    margin: 0px 15px 0px 50px;
+    font: normal bold 20px 'Poiret One', cursive;
+
+}
+
+.sectionC-item1 button , .sectionC-item2 button , .sectionC-item3 button  {
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    font: normal bold 20px 'Poiret One', cursive;
+}
+
+.sectionC-items button:hover {
+    background-color: rgb(235, 235, 235);
+    font-weight: bolder;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.sectionD {
+    width:76%;
+    height: 200px;
+    border: 2px solid whitesmoke;
+    /* background-color: whitesmoke; */
+    margin: 100px auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    
+}
+
+.sectionD-icon1 , .sectionD-icon2 , .sectionD-icon3 , .sectionD-icon4 , .sectionD-icon5 {
+    flex-basis: 20%;
+    height: 100%;
+    
+}
+
+.icon-line {
+    flex-basis: 2px;
+    height: 150px;
+    background-color: whitesmoke;
+}
+
+.sectionD i {
+    display: block;
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 60px;
+    color: black;
+    column-rule: 2px solid black;
+
+}
+
+.sectionD i:hover {
+    transform: rotate3d(180deg);
+    /* visibility: hidden; */
+}
+
+.sectionD p {
+    text-align: center;
+    margin: 0px 20px;
+
+}
+.sectionD h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sectionE {
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 1%;
+
+}
+
+.sectionE-item1 , .sectionE-item2 , .sectionE-item3 {
+    padding: 5% 5%;
+    background-color: black;
+    
+}
+
+.sectionE-item2 {
+    background-image: url(../Images/FOREST-in-Forest-renewed_1080x1080_387a36a5-4ad6-4b7d-b825-09cf23008e29_600x.webp);
+    background-size: cover;
+}
+
+.sectionE-item3 {
+    background-image: url(../Images/Blossom-Perfume_400x.webp);
+    background-size: cover;
+}
+
+
+.sectionE-item1 h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sectionE-item2 h2 , .sectionE-item3 h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.sectionE p {
+    font-size: 22px;
+    margin-left: 10px;
+
+}
+
+.sectionG {
+    width: 80%;
+    height: 100vh;
+    /* border: 2px solid black; */
+    margin: auto;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 45%);
+    grid-gap: 10% 1%;
+    
+    
+
+}
+
+.sectionG-item1 , .sectionG-item2 , .sectionG-item3 , .sectionG-item4 , .sectionG-item5 , .sectionG-item6 , .sectionG-item7 , .sectionG-item8 {
+    background-color: black;
+
+} 
+
+.sectionG-item1 {
+    background-image: url(../Images/BLOSSOM-Deo-1.1-square_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item2 {
+    background-image: url(../Images/DEO-Forest-new-grad_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item3 {
+    background-image: url(../Images/Dusk-Stick-Deo-1.1-1080px_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item4 {
+    background-image: url(../Images/Love-Stick-Deo-1.1-1080px_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item5 {
+    background-image: url(../Images/Spray-DUSK_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item6 {
+    background-image: url(../Images/Bodywash-DUSK-gradient_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item7 {
+    background-image: url(../Images/Bodywash-Forest-grad-front_600x.webp);
+    background-size: cover;
+}
+
+.sectionG-item8 {
+    background-image: url(../Images/Bodywash-Sport-gradient-front_600x.webp);
+    background-size: cover;
+}
+
+
